@@ -25,4 +25,10 @@ class Video extends CI_Controller {
 		$data['query'] = $this->video_model->get_entries(10);
 		echo json_encode($data);
 	}
+	
+	public function getVideos() {
+		$this->load->model('video_model');
+		$data['query'] = $this->video_model->get_entries(10);
+		echo json_encode($data);
+	}
 }
